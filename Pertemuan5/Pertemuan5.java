@@ -1,4 +1,4 @@
-class tank{ // main class
+class tank{
     public String nama = "Tank WW2";
     public String bahan = "Besi Baja";
     public int kapasitas = 3;

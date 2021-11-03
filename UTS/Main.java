@@ -19,6 +19,127 @@ public class Main {
 
         System.out.println("\n|Pedang|");
         m.GeneratePedang("C:\\CODING\\Java\\Program3\\src\\UTS\\Database\\PedangPanjang.txt");
+	    
+	    
+        Scanner myScr = new Scanner(System.in); 
+        m.GeneratePedang(myScr);
+    
+        Scanner myScr1 = new Scanner(System.in); 
+        m.GenerateTongkatSihir(myScr1);
+    
+    }
+
+    private void GeneratePedang(Scanner myScr){
+
+    List<Pedang> listPedang = new ArrayList<Pedang>();
+    System.out.println("==Mengisi Pedang==");
+    for (int i = 0; i < 2; i++) {
+        System.out.println("------------------------------");
+        System.out.println("Data Pedang ke-"+i);
+        System.out.println("------------------------------");
+        Pedang s = new Pedang();
+
+        System.out.print("Nama Pedang : ");
+        String namaSnjt = myScr.nextLine();
+        s.setNamaSnjt(namaSnjt);
+
+        System.out.print("Tipe Serangan : ");
+        String tipeserang = myScr.nextLine();
+        s.setTipeserang(tipeserang);
+
+        System.out.print("Mana Digunakan : ");
+        String mana = myScr.nextLine();
+        s.setMana (Integer.parseInt(mana));
+
+        System.out.print("Damage Ditimbulkan :");
+        String atk = myScr.nextLine();
+        s.setAtk (Integer.parseInt(atk));
+
+        System.out.print("Tipe Pedang : ");
+        String tipePedang = myScr.nextLine();
+        s.setTipePedang(tipePedang);
+
+        System.out.print("Masukan Harga : ");
+        String harga = myScr.nextLine();
+        s.setHarga(Double.parseDouble(harga));
+
+        listPedang.add(s);
+    }
+    System.out.println("\n=List Pedang=");
+    int index = 0;
+    for (Pedang s : listPedang) {
+        System.out.println("------------------------------");
+        System.out.println("Data Pedang ke-"+index);
+        System.out.println("------------------------------");
+        System.out.println("Nama : "+s.getNamaSnjt());
+        System.out.println("Tipe Serangan : "+s.getTipeserang());
+        System.out.println("Mana : "+s.getMana());
+        System.out.println("Damage : "+s.getAtk());
+        System.out.println("Tipe Senjata : "+s.getTipePedang());
+        System.out.println("Harga : $"+s.getHarga());
+        System.out.println("------------------------------\n");
+        index++;
+    }
+}
+
+private void GenerateTongkatSihir(Scanner myScr1){
+
+    List<TongkatSihir> listTongkatSihirs = new ArrayList<TongkatSihir>();
+    System.out.println("==Mengisi Alat Sihir==");
+    for (int i = 0; i < 2; i++) {
+        System.out.println("------------------------------");
+        System.out.println("Data Alat Sihir ke-"+i);
+        System.out.println("------------------------------");
+        TongkatSihir s = new TongkatSihir();
+
+        System.out.print("Nama Alat : ");
+        String namaSnjt = myScr1.nextLine();
+        s.setNamaSnjt(namaSnjt);
+
+        System.out.print("Tipe Serangan : ");
+        String tipeserang = myScr1.nextLine();
+        s.setTipeserang(tipeserang);
+
+        System.out.print("Mana Digunakan : ");
+        String mana = myScr1.nextLine();
+        s.setMana (Integer.parseInt(mana));
+
+        System.out.print("Damage Ditimbulkan :");
+        String atk = myScr1.nextLine();
+        s.setAtk (Integer.parseInt(atk));
+
+        System.out.print("Skill Spesial : ");
+        String skilSpc = myScr1.nextLine();
+        s.setSkilSpc(skilSpc);
+
+        System.out.print("Tipe Alat : ");
+        String jenisSenjata = myScr1.nextLine();
+        s.setJenisSenjata(jenisSenjata);
+
+
+        System.out.print("Masukan Harga : ");
+        String harga = myScr1.nextLine();
+        s.setHarga(Double.parseDouble(harga));
+
+        listTongkatSihirs.add(s);
+    }
+    System.out.println("\n=List Alat Sihir=");
+    int index = 0;
+    for (TongkatSihir s : listTongkatSihirs) {
+        System.out.println("------------------------------");
+        System.out.println("Data isian ke-"+index);
+        System.out.println("------------------------------");
+        System.out.println("Nama : "+s.getNamaSnjt() );
+        System.out.println("Tipe Serang : "+s.getTipeserang() );
+        System.out.println("Mana : "+s.getMana() );
+        System.out.println("Damage : "+s.getAtk() );
+        System.out.println("Skill Special : "+s.getSkilSpc());
+        System.out.println("Jenis Senjata : "+s.getJenisSenjata());
+        System.out.println("Harga : $"+s.getHarga());
+        System.out.println("------------------------------\n");
+        index++;
+    }
+}
     }
 
 

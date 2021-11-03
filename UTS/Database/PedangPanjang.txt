@@ -1,0 +1,3 @@
+Blits Of Blade,Jarak Dekat,5,50,Single Sword,2500
+Longinus Spear,Jarak Sedang,10,45,Spear,2000
+Devil Handshake,Jarak Dekat,7,55,Claw,3000

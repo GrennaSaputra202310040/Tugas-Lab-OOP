@@ -143,10 +143,9 @@ public class Login extends JFrame {
 				} else if (inUser.equalsIgnoreCase("202310040") && inPass.equalsIgnoreCase("19092002")) { //kondisi jika username dan password benar
 					JOptionPane.showMessageDialog(btnSignIn, "Selamat datang di aplikasi Perpustakaan IBIK.");
 		
-				} else { //kondisi jika username dan password tidak sesuai
-					JOptionPane.showMessageDialog(btnSignIn, "Data yang anda masukan salah.");
+				} else {
+					JOptionPane.showMessageDialog(btnSignIn, "Data yang anda masukan salah."); //kondisi jika username dan password tidak sesuai
 				}
-				//menampilkan output username dan password di console
 				System.out.println("username: " + inUser);
 				System.out.println("password: " + inPass);
 			}
